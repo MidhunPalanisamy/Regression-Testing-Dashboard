@@ -14,12 +14,12 @@ const Sidebar = () => {
   const isActive = (path) => location.pathname === path;
 
   const menuItems = [
-    { path: '/dashboard', label: 'Dashboard', icon: '📊', roles: ['ADMIN', 'TESTER', 'VIEWER'] },
-    { path: '/builds', label: 'Builds', icon: '🏗️', roles: ['ADMIN', 'TESTER', 'VIEWER'] },
-    { path: '/testcases', label: 'Test Cases', icon: '📝', roles: ['ADMIN', 'TESTER', 'VIEWER'] },
-    { path: '/comparison', label: 'Build Comparison', icon: '🔍', roles: ['ADMIN', 'TESTER', 'VIEWER'] },
-    { path: '/regression', label: 'Regression Runs', icon: '🔄', roles: ['ADMIN', 'TESTER', 'VIEWER'] },
-    { path: '/users', label: 'User Management', icon: '👥', roles: ['ADMIN'] },
+    { path: '/dashboard', label: 'Dashboard', icon: '', roles: ['ADMIN', 'TESTER', 'VIEWER'] },
+    { path: '/builds', label: 'Builds', icon: '', roles: ['ADMIN', 'TESTER', 'VIEWER'] },
+    { path: '/testcases', label: 'Test Cases', icon: '', roles: ['ADMIN', 'TESTER', 'VIEWER'] },
+    { path: '/comparison', label: 'Build Comparison', icon: '', roles: ['ADMIN', 'TESTER', 'VIEWER'] },
+    { path: '/regression', label: 'Regression Runs', icon: '', roles: ['ADMIN', 'TESTER', 'VIEWER'] },
+    { path: '/users', label: 'User Management', icon: '', roles: ['ADMIN'] },
   ];
 
   return (
