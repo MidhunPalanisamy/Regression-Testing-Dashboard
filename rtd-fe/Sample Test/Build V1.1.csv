@@ -1,0 +1,16 @@
+testCaseName,module,status,duration
+Login with valid credentials,Authentication,PASS,0.44
+Login with invalid credentials,Authentication,FAIL,0.42
+Create new build,Build Management,PASS,0.58
+Upload CSV results,Results Upload,FAIL,1.20
+Upload JSON results,Results Upload,PASS,1.02
+Compare builds basic flow,Comparison,PASS,0.90
+Pass percentage calculation,Dashboard,FAIL,0.52
+Pie chart rendering,Dashboard,PASS,0.31
+Line chart trend rendering,Dashboard,PASS,0.36
+Generate summary report,Reports,PASS,0.82
+Role based access for QA,Security,PASS,0.54
+Role based access for Developer,Security,PASS,0.51
+Role based access for Manager,Security,PASS,0.49
+Database connection check,System,PASS,0.24
+API response validation,System,PASS,0.41

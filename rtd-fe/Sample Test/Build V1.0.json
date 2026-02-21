@@ -1,0 +1,20 @@
+[
+  {
+    "testCaseName": "Login with valid credentials",
+    "module": "Authentication",
+    "status": "PASS",
+    "duration": 0.45
+  },
+  {
+    "testCaseName": "Login with invalid credentials",
+    "module": "Authentication",
+    "status": "PASS",
+    "duration": 0.40
+  },
+  {
+    "testCaseName": "Create new build",
+    "module": "Build Management",
+    "status": "PASS",
+    "duration": 0.60
+  }
+]
