@@ -38,6 +38,7 @@ const Login = () => {
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Username</label>
             <input
+              id="username"
               type="text"
               required
               value={formData.username}
@@ -50,6 +51,7 @@ const Login = () => {
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">Password</label>
             <input
+              id="password"
               type="password"
               required
               value={formData.password}
@@ -60,6 +62,7 @@ const Login = () => {
           </div>
 
           <button
+            id="loginBtn"
             type="submit"
             disabled={loading}
             className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg transition disabled:opacity-50"

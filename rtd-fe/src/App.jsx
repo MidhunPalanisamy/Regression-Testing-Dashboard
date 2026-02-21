@@ -11,6 +11,7 @@ import TestCases from './pages/TestCases';
 import BuildComparison from './pages/BuildComparison';
 import RegressionRuns from './pages/RegressionRuns';
 import Users from './pages/Users';
+import AccessDenied from './pages/AccessDenied';
 
 function App() {
   return (
@@ -19,10 +20,11 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/access-denied" element={<AccessDenied />} />
           <Route
             path="/dashboard"
             element={
-              <ProtectedRoute>
+              <ProtectedRoute allowedRoles={['ADMIN', 'TESTER', 'VIEWER']}>
                 <Dashboard />
               </ProtectedRoute>
             }
@@ -30,7 +32,7 @@ function App() {
           <Route
             path="/builds"
             element={
-              <ProtectedRoute>
+              <ProtectedRoute allowedRoles={['ADMIN', 'TESTER', 'VIEWER']}>
                 <Builds />
               </ProtectedRoute>
             }
@@ -38,7 +40,7 @@ function App() {
           <Route
             path="/testcases"
             element={
-              <ProtectedRoute>
+              <ProtectedRoute allowedRoles={['ADMIN', 'TESTER', 'VIEWER']}>
                 <TestCases />
               </ProtectedRoute>
             }
@@ -46,7 +48,7 @@ function App() {
           <Route
             path="/comparison"
             element={
-              <ProtectedRoute>
+              <ProtectedRoute allowedRoles={['ADMIN', 'TESTER', 'VIEWER']}>
                 <BuildComparison />
               </ProtectedRoute>
             }
@@ -54,7 +56,7 @@ function App() {
           <Route
             path="/regression"
             element={
-              <ProtectedRoute>
+              <ProtectedRoute allowedRoles={['ADMIN', 'TESTER', 'VIEWER']}>
                 <RegressionRuns />
               </ProtectedRoute>
             }
@@ -68,6 +70,7 @@ function App() {
             }
           />
           <Route path="/" element={<Navigate to="/dashboard" />} />
+          <Route path="*" element={<Navigate to="/dashboard" />} />
         </Routes>
       </Router>
       <ToastContainer position="top-right" autoClose={3000} />
